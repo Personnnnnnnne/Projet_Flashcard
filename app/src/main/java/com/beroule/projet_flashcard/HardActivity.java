@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class QuizHarryPotterActivity extends AppCompatActivity {
+public class HardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_harry_potter);
+        setContentView(R.layout.activity_hard);
     }
 }

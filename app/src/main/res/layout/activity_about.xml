@@ -10,7 +10,7 @@
         android:id="@+id/devbyTextView"
         android:layout_width="326dp"
         android:layout_height="55dp"
-        android:text="Developepd by Beroule"
+        android:text="Developped by Beroule"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/meImageView"
         app:layout_constraintEnd_toEndOf="parent"

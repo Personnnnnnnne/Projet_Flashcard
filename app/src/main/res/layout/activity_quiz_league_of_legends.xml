@@ -6,4 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".QuizLeagueOfLegendsActivity">
 
+    <Button
+        android:id="@+id/easyButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="FACILE"
+        app:layout_constraintBottom_toTopOf="@+id/normalButton"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyTextView" />
+
+    <Button
+        android:id="@+id/normalButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="NORMAL"
+        app:layout_constraintBottom_toTopOf="@+id/hardButton"
+        app:layout_constraintEnd_toEndOf="@+id/easyButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/easyButton"
+        app:layout_constraintTop_toBottomOf="@+id/easyButton" />
+
+    <Button
+        android:id="@+id/hardButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="HARD"
+        app:layout_constraintBottom_toTopOf="@+id/hardcoreButton"
+        app:layout_constraintEnd_toEndOf="@+id/normalButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/normalButton"
+        app:layout_constraintTop_toBottomOf="@+id/normalButton" />
+
+    <Button
+        android:id="@+id/hardcoreButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="HARDCORE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/hardButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/hardButton"
+        app:layout_constraintTop_toBottomOf="@+id/hardButton" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="375dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/voices_of_legends"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/difficultyTextView"
+        android:layout_width="233dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="niveau de difficulté"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

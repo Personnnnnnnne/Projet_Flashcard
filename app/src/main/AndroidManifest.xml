@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HardcoreActivity"></activity>
+        <activity android:name=".StatisticActivity"></activity>
+        <activity android:name=".ListChampionActivity" />
+        <activity android:name=".HardcoreActivity" />
         <activity android:name=".HardActivity" />
         <activity android:name=".NormalActivity" />
-        <activity android:name=".EasyActivity"></activity>
-
+        <activity android:name=".EasyActivity" />
         <activity android:name=".QuizLeagueOfLegendsActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".MainActivity">

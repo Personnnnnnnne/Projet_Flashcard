@@ -21,13 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<Question> ListQuestion = new ArrayList<>();
-        ArrayList<String> answer = new ArrayList<>();
-        answer.add("Ahri");
-        answer.add("Braum");
-        answer.add("Taric");
-        answer.add("Thresh");
-
         Button aboutButton = findViewById(R.id.aboutButton);
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, QuizLeagueOfLegendsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button championListButton = findViewById(R.id.championListButton);
+        championListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListChampionActivity.class);
                 startActivity(intent);
             }
         });

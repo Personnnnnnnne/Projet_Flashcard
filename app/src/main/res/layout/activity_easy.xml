@@ -30,36 +30,48 @@
         tools:ignore="MissingConstraints" />
 
     <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
         android:id="@+id/radioGroup_character"
-        tools:ignore="MissingConstraints">
+        android:layout_width="74dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="167dp">
 
+
+        <RadioButton
+            android:id="@+id/taric"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="8dp"
+            android:text="Taric" />
+
+        <RadioButton
+            android:id="@+id/aatrox"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Aatrox" />
     </RadioGroup>
 
-    <RadioButton
-        android:id="@+id/taric"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="8dp"
-        android:text="Taric"
-        app:layout_constraintBottom_toTopOf="@+id/aatrox"
-        app:layout_constraintEnd_toEndOf="@+id/aatrox"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/aatrox"
-        app:layout_constraintTop_toBottomOf="@+id/playButton"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <RadioButton
-        android:id="@+id/aatrox"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:text="Aatrox"
+    <Button
+        android:id="@+id/valideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/playButton"
         app:layout_constraintStart_toStartOf="@+id/playButton"
-        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_character" />
+
+    <TextView
+        android:id="@+id/currentlyQuestionTextView"
+        android:layout_width="160dp"
+        android:layout_height="49dp"
+        android:gravity="center"
+        android:text="Question"
+        app:layout_constraintBottom_toTopOf="@+id/playButton"
+        app:layout_constraintStart_toStartOf="@+id/questionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/questionTextView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

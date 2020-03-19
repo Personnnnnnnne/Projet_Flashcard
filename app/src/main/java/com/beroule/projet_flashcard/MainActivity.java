@@ -14,11 +14,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button aboutButton = findViewById(R.id.aboutButton);
+        Button aboutButton = findViewById(R.id.aboutButton);
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button quizLeagueOfLegendsButton = findViewById(R.id.quizLeagueOfLegendsButton);
+        quizLeagueOfLegendsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, QuizLeagueOfLegendsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button quizHarryPotterButton = findViewById(R.id.quizHarryPotterButton);
+        quizHarryPotterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, QuizHarryPotterActivity.class);
                 startActivity(intent);
             }
         });

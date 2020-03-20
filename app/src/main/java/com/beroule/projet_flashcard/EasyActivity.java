@@ -21,8 +21,8 @@ public class EasyActivity extends AppCompatActivity {
     int CurrentlyQuestion;
     int CurrentlyQuestionTotal;
 
-    int tableauSon[] = {R.raw.aatrox_selection, R.raw.nasus_selection, R.raw.rammus_selection};
-    public int totalSon = tableauSon.length;
+    static int[] tableauSon = {R.raw.aatrox_selection, R.raw.nasus_selection, R.raw.rammus_selection};
+    public static int totalSon = tableauSon.length;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,52 +4,79 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionGenerator {
-    static Champion tableauChampion[] = {new Champion(R.raw.aatrox_selection,"Aatrox"), new Champion(R.raw.rammus_selection,"Rammus"),
-            new Champion(R.raw.nasus_selection,"Nasus"), new Champion(R.raw.brand_selection, "Brand")
-            , new Champion(R.raw.caitlyn_selection, "Caitlyn"), new Champion(R.raw.cassiopeia_selection, "Cassiopeia")
-            , new Champion(R.raw.chogath_selection, "Cho'Gath"), new Champion(R.raw.corki_selection, "Corki")
-            , new Champion(R.raw.darius_selection, "Darius"), new Champion(R.raw.braum_selection, "Braum")};
+    static ArrayList<Champion> tableauChampion = new ArrayList<>();
 
 
-    int numberOfQuestions = EasyActivity.totalSon;
+    public static void load() {
+        ArrayList<String> answers = new ArrayList<>();
+        answers.add("Aatrox");
+        answers.add("Ahri");
+        answers.add("Elise");
+        Champion c = new Champion(R.raw.aatrox_selection, "Aatrox", answers);
+        tableauChampion.add(c);
 
+        answers = new ArrayList<>();
+        answers.add("Rammus");
+        answers.add("Fiora");
+        answers.add("Lulu");
+        c = new Champion(R.raw.rammus_selection, "Rammus", answers);
+        tableauChampion.add(c);
 
-    public List<Question>QuestionGenerator(){
+        answers = new ArrayList<>();
+        answers.add("Jax");
+        answers.add("Rengar");
+        answers.add("Lux");
+        c = new Champion(R.raw.rengar_selection, "Rengar", answers);
+        tableauChampion.add(c);
 
-        ArrayList<Question> questions = new ArrayList<Question>();
+        answers = new ArrayList<>();
+        answers.add("Caitlyn");
+        answers.add("Fiora");
+        answers.add("Irelia");
+        c = new Champion(R.raw.caitlyn_selection, "Caitlyn", answers);
+        tableauChampion.add(c);
 
-        for(int i = 0; i < tableauChampion.length; i++) {
+        answers = new ArrayList<>();
+        answers.add("Garen");
+        answers.add("Tryndamere");
+        answers.add("Swain");
+        c = new Champion(R.raw.garen_selection, "Garen", answers);
+        tableauChampion.add(c);
 
-            questions.add(new Question(tableauChampion[i], choises));
-            if (questions.choises = findViewById(tableauChampion.text)){
-        }
+        answers = new ArrayList<>();
+        answers.add("Brand");
+        answers.add("Fizz");
+        answers.add("Ezreal");
+        c = new Champion(R.raw.ezreal_selection, "Ezreal", answers);
+        tableauChampion.add(c);
 
-        return questions;
+        answers = new ArrayList<>();
+        answers.add("Lee Sin");
+        answers.add("Alistar");
+        answers.add("Galio");
+        c = new Champion(R.raw.alistar_selection, "Alistar", answers);
+        tableauChampion.add(c);
 
+        answers = new ArrayList<>();
+        answers.add("Katarina");
+        answers.add("Anivia");
+        answers.add("Elise");
+        c = new Champion(R.raw.katarina_selection, "Katarina", answers);
+        tableauChampion.add(c);
+
+        answers = new ArrayList<>();
+        answers.add("Dr Mundo");
+        answers.add("Gragas");
+        answers.add("Maokai");
+        c = new Champion(R.raw.drmundo_selection, "Dr Mundo", answers);
+        tableauChampion.add(c);
+
+        answers = new ArrayList<>();
+        answers.add("Mordekaiser");
+        answers.add("Hecarim");
+        answers.add("Thresh");
+        c = new Champion(R.raw.mordekaiser_selection, "Mordekaiser", answers);
+        tableauChampion.add(c);
     }
-
-    public List<Champion>Choises(Object tableauhero){
-        List<Champion> champions;
-        champions = new ArrayList<Champion>();
-
-        }
-
-    }
-
-    private java.awt.SystemColor findViewById(Champion[] tableauChampion) {
-    }
-
-    //{"Aatrox", "Ahri", "Akali", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "Blitzcrank", "Brand", "Braum", "Caitlyn",
-    //"Cassiopeia", "Cho'gath", "Corki", "Darius", "Diana", "Dr Mundo", "Draven", "Elise", "Evelyn", "Ezreal", "Fiddlesticks", "Fiora", "Fizz",
-    // "Galio", "Gangplank", "Garen", "Gragas", "Graves", "Hecarim", "Heimerdinger", "Irelia", "Janna", "Jarvan IV", "Jax", "Jayce", "Jinx",
-    //"Karma", "Karthus", "Kassadin", "Katarina", "Kayle", "Kennen", "Kha'zix", "Kog'maw", "Leblanc", "Lee Sin", "Leona", "Lissandra", "Lucian",
-    // "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "Maitre Yi", "Miss Forturne", "Mordekaiser", "Morgana", "Nami", "Nasus", "Nautilus",
-    // "Nidalee", "Nocturne", "Nunu", "Olaf", "Orianna", "Panteon", "Poppy", "Rammus", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Sejuani",
-    // "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Sivir", "Sona", "Soraka", "Swain", "Syndra", "Talon", "Taric", "Teemo", "Thresh", "Tristana",
-    //  "Trundle", "Tryndamere", "Twisted Fate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Vel'koz", "Vi", "Viktor", "Vladimir",
-    //  "Volibear", "Warwick", "Wukong", "Xerath", "Xin Zhao", "Yasuo", "Yorick", "Zac", "Zilean", "Zed", "Ziggs", "Zyra"};
-
-
-
 }
 

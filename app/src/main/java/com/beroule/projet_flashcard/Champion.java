@@ -1,13 +1,15 @@
 package com.beroule.projet_flashcard;
 
+import java.util.ArrayList;
+
 public class Champion {
-    public Champion(int mediaIdChampion, String nameChampion) {
-        String[] tableauhero = {"Aatrox", "Ahri", "Nasus", "Thresh"};
+    public final int soundId;
+    public final String name;
+    public final ArrayList<String> answers;
 
-        this.mediaIdChampion = mediaIdChampion;
-        this.nameChampion = nameChampion;
+    public Champion(int soundId, String name, ArrayList<String> answers) {
+        this.soundId = soundId;
+        this.name = name;
+        this.answers = answers;
     }
-
-    int mediaIdChampion;
-    String nameChampion;
 }

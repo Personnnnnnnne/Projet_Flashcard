@@ -30,9 +30,9 @@
         tools:ignore="MissingConstraints" />
 
     <RadioGroup
-        android:id="@+id/radioGroup_character"
-        android:layout_width="74dp"
-        android:layout_height="55dp"
+        android:id="@+id/radioGroupCharacter"
+        android:layout_width="85dp"
+        android:layout_height="95dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playButton"
         tools:ignore="MissingConstraints"
@@ -51,6 +51,12 @@
             android:layout_width="80dp"
             android:layout_height="25dp"
             android:text="Aatrox" />
+
+        <RadioButton
+            android:id="@+id/thresh"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Thresh" />
     </RadioGroup>
 
     <Button
@@ -61,7 +67,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/playButton"
         app:layout_constraintStart_toStartOf="@+id/playButton"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup_character" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCharacter" />
 
     <TextView
         android:id="@+id/currentlyQuestionTextView"

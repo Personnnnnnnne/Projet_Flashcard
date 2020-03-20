@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,14 +21,24 @@ public class EasyActivity extends AppCompatActivity {
 
     int CurrentlyQuestion;
     int CurrentlyQuestionTotal;
+    private Champion currentChampion;
 
-    static int[] tableauSon = {R.raw.aatrox_selection, R.raw.nasus_selection, R.raw.rammus_selection};
+    static int[] tableauSon = {R.raw.aatrox_selection, R.raw.rammus_selection, R.raw.rengar_selection, R.raw.caitlyn_selection, R.raw.garen_selection,
+    R.raw.ezreal_selection, R.raw.alistar_selection, R.raw.katarina_selection, R.raw.drmundo_selection, R.raw.mordekaiser_selection};
     public static int totalSon = tableauSon.length;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy);
+
+        QuestionGenerator.load();
+        currentChampion = QuestionGenerator.tableauChampion.get(0);
+
+        RadioButton radioButton1 = findViewById(R.id.taric);
+        radioButton1.setText(currentChampion.answers.get(0));
+        RadioButton radioButton2 = findViewById(R.id.aatrox);
+        radioButton2.setText(currentChampion.answers.get(1));
 
         CurrentlyQuestionTotal = 10;
         CurrentlyQuestion = 1;
@@ -47,8 +58,31 @@ public class EasyActivity extends AppCompatActivity {
         validButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                RadioGroup radioGroup = findViewById(R.id.radioGroupCharacter);
+                // On récupère l'ID du radiobutton sélectionné
+                // renvoie -1 si aucun RadioButton n'a été sélectionné
+                int idRadioButton = radioGroup.getCheckedRadioButtonId();
+
+                if (idRadioButton == -1) {
+                    Log.i("EasyActivity", "Aucun champion selectionner");
+                    return;
+                }
+
+                // On récupère le radioButton associé à cet id (idRadioButton)
+                // CAD le radiobutton qui a été sélectionné
+                RadioButton radioButton = findViewById(idRadioButton);
+
+                if (radioButton.getText().equals(currentChampion.name)) {
+                    Log.i("EasyActivity", "Bonne réponse ");
+
+                } else {
+                    Log.i("EasyActivity", "Mauvaise réponse");
+                }
+
                 if (CurrentlyQuestion == CurrentlyQuestionTotal){
                     Intent intent = new Intent(EasyActivity.this, StatisticActivity.class);
+                    startActivity(intent);
                 }
                 else{
                     CurrentlyQuestion ++;

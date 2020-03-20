@@ -6,4 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".StatisticActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="235dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="304dp"
+        android:text="Nos Statistics ont beaucoup de mal a chargé a cause du COVID-19, elles sont malheuresement en confinement pour le moment merci de patienter jusqu'a la fin de ce confinement, Merci de votre compréhension"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/statisticsTextView"
+        android:layout_width="150dp"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:text="Statistics"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
